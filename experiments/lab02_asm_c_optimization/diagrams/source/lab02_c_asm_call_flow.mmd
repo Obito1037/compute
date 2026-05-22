@@ -1,0 +1,20 @@
+flowchart TD
+    A["main"] --> B["init_students"]
+    A --> C["display_students before sorting"]
+    A --> D["computeAverageScore_c"]
+    A --> E["sortByAverage_bubble"]
+    A --> F["display_students after sorting"]
+    A --> G["verify_average_function"]
+    G --> H["computeAverageScore_c expected"]
+    G --> I["computeAverageScore_asm"]
+    G --> J["computeAverageScore_asm_opt"]
+    A --> K["measure_average"]
+    K --> D
+    K --> I
+    K --> J
+    A --> L["measure_sort"]
+    L --> E
+    L --> M["sortByAverage_quick"]
+    N["student layout: size 38, scores offset 20, average offset 36"] --> D
+    N --> I
+    N --> J

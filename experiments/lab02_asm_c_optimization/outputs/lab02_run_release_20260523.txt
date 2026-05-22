@@ -1,0 +1,38 @@
+LAB02 ASM/C mixed programming and optimization
+struct student size=38 offset scores=20 offset average=36
+student[0] name is stored as GBK/CP936 bytes for Zhang Jialiang: D5 C5 BC D2 C1 BA 00
+
+Before average and sorting
+idx name_bytes              sid        scores                         average
+ 0  D5 C5 BC D2 C1 BA 00 00  U202414558  78  89 100  65  76  87  98  63      0
+ 1  6C 69 00 00 00 00 00 00  U202414001  95  60  71  82  93  58  69  80      0
+ 2  77 61 6E 67 00 00 00 00  U202414002  66  77  88  99  64  75  86  97      0
+ 3  63 68 65 6E 00 00 00 00  U202414003  83  94  59  70  81  92  57  68      0
+ 4  7A 68 61 6F 00 00 00 00  U202414004 100  65  76  87  98  63  74  85      0
+ 5  71 69 61 6E 00 00 00 00  U202414005  71  82  93  58  69  80  91  56      0
+ 6  73 75 6E 00 00 00 00 00  U202414006  88  99  64  75  86  97  62  73      0
+ 7  7A 68 6F 75 00 00 00 00  U202414007  59  70  81  92  57  68  79  90      0
+ 8  77 75 00 00 00 00 00 00  U202414008  76  87  98  63  74  85  96  61      0
+ 9  7A 68 65 6E 67 00 00 00  U202414009  93  58  69  80  91  56  67  78      0
+
+After C average and bubble sorting
+idx name_bytes              sid        scores                         average
+ 0  D5 C5 BC D2 C1 BA 00 00  U202414558  78  89 100  65  76  87  98  63     82
+ 1  77 61 6E 67 00 00 00 00  U202414002  66  77  88  99  64  75  86  97     81
+ 2  7A 68 61 6F 00 00 00 00  U202414004 100  65  76  87  98  63  74  85     81
+ 3  73 75 6E 00 00 00 00 00  U202414006  88  99  64  75  86  97  62  73     80
+ 4  77 75 00 00 00 00 00 00  U202414008  76  87  98  63  74  85  96  61     80
+ 5  6C 69 00 00 00 00 00 00  U202414001  95  60  71  82  93  58  69  80     76
+ 6  63 68 65 6E 00 00 00 00  U202414003  83  94  59  70  81  92  57  68     75
+ 7  71 69 61 6E 00 00 00 00  U202414005  71  82  93  58  69  80  91  56     75
+ 8  7A 68 6F 75 00 00 00 00  U202414007  59  70  81  92  57  68  79  90     74
+ 9  7A 68 65 6E 67 00 00 00  U202414009  93  58  69  80  91  56  67  78     74
+VERIFY average ASM baseline             PASS checksum=4244
+VERIFY average ASM optimized            PASS checksum=4244
+TIME average C baseline               n=256 repeat=20000 ms=5.670 checksum=2539954
+TIME average ASM baseline idiv        n=256 repeat=20000 ms=14.262 checksum=2539954
+TIME average ASM optimized shift      n=256 repeat=20000 ms=4.414 checksum=2539954
+TIME sort    C bubble baseline        n=256 repeat=200 ms=6.773 checksum=2492200 sorted=PASS
+TIME sort    C quicksort optimized    n=256 repeat=200 ms=0.478 checksum=2492200 sorted=PASS
+SUMMARY average_ms C=5.670 ASM=14.262 ASM_OPT=4.414
+SUMMARY sort_ms bubble=6.773 quicksort=0.478

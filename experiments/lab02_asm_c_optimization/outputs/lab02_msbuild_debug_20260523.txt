@@ -1,0 +1,38 @@
+适用于 .NET Framework MSBuild 版本 18.4.0+6e61e96ac
+生成启动时间为 2026/5/23 1:20:50。
+
+项目“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\汇编和C混合编程示例.sln”在节点 1 上(Rebuild 个目标)。
+ValidateSolutionConfiguration:
+  正在生成解决方案配置“Debug|x86”。
+项目“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\汇编和C混合编程示例.sln”(1)正在节点 1 上生成“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\汇编和C混合编程示例\汇编和C混合编程示例.vcxproj”(2) (Rebuild 个目标)。
+CoreClean:
+  正在创建目录“Debug\”。
+PrepareForBuild:
+  已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+  正在创建目录“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\Debug\”。
+  正在创建目录“Debug\汇编和C混合编程示例.tlog\”。
+InitializeBuildStatus:
+  正在创建“Debug\汇编和C混合编程示例.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+  正在对“Debug\汇编和C混合编程示例.tlog\unsuccessfulbuild”执行 Touch 任务。
+_MASM:
+  Assembling computeAverageScore_lab02.asm...
+  cmd.exe /C "C:\Users\24209\AppData\Local\Temp\tmpcbd72229f95a453390cfbec00e00825d.cmd"
+  ml.exe /c /nologo /Zi /Fo"Debug\computeAverageScore_lab02.obj" /W3 /errorReport:prompt  /TacomputeAverageScore_lab02.asm
+ClCompile:
+  D:\vs\VC\Tools\MSVC\14.50.35717\bin\HostX64\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /FAs /Fa"Debug\\" /Fo"Debug\\" /Fd"Debug\vc145.pdb" /external:W3 /Gd /TC /analyze- /FC /errorReport:queue main_lab02.c
+  main_lab02.c
+Link:
+  D:\vs\VC\Tools\MSVC\14.50.35717\bin\HostX64\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\Debug\汇编和C混合编程示例.exe" /INCREMENTAL /ILK:"Debug\汇编和C混合编程示例.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\Debug\汇编和C混合编程示例.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\Debug\汇编和C混合编程示例.lib" /MACHINE:X86 Debug\main_lab02.obj
+  Debug\computeAverageScore_lab02.obj
+  汇编和C混合编程示例.vcxproj -> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\Debug\汇编和C混合编程示例.exe
+FinalizeBuildStatus:
+  正在删除文件“Debug\汇编和C混合编程示例.tlog\unsuccessfulbuild”。
+  正在对“Debug\汇编和C混合编程示例.tlog\汇编和C混合编程示例.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\汇编和C混合编程示例\汇编和C混合编程示例.vcxproj”(Rebuild 个目标)的操作。
+已完成生成项目“D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab02_asm_c_optimization\src\work\汇编和C混合编程示例.sln”(Rebuild 个目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:02.23
