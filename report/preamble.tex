@@ -1,0 +1,51 @@
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{amsmath,amssymb}
+\usepackage{makecell}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+\ctexset{
+  section = {format = \zihao{3}\heiti\centering, name = {实验,：}, number = \arabic{section}},
+  subsection = {format = \zihao{4}\heiti, number = \thesection.\arabic{subsection}},
+  subsubsection = {format = \zihao{-4}\heiti, number = \thesubsection.\arabic{subsubsection}}
+}
+
+\titlecontents{section}[0em]{\vspace{0.5em}\heiti}{实验\thecontentslabel：}{ }{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsection}[2em]{}{\thecontentslabel\quad}{ }{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsubsection}[4em]{}{\thecontentslabel\quad}{ }{\titlerule*[0.5pc]{.}\contentspage}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  tabsize=4
+}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\renewcommand{\baselinestretch}{1.15}
+\captionsetup{font=small,labelfont=bf}

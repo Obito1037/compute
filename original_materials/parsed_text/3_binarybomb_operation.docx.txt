@@ -1,0 +1,15 @@
+PATH: /mnt/data/rar_selected/binarybomb_operation.docx
+
+实验   机器级语言理解(二进制炸弹拆除)
+ 操作说明
+    整个程序包含有：bomb.c  support.c phases.c support.h。在老师手上有 phases.c，但同学们没有该源程序，而只有 phases.o
+提供给学生的包： bomb.c  support.c phases.o support.h
+由学生生成执行程序：
+gcc -g -o bomb -D U* bomb.c support.c phases.o
+其中 *为学号的最后一位。 例如: 学号为 U202415001
+    则使用命令 gcc -g -o bomb -D U1 bomb.c support.c phases.o
+运行程序：
+    ./bomb
+    下面给出了三关通过的效果。
+提醒：（1）一定要输入自己的学号，运行结果中会显示学号的。
+（2）在生成程序时，一定要带编译开关 -D U*； *为学号的最后一位数字。

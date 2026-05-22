@@ -1,0 +1,687 @@
+--- slide 1 ---
+链接实验操作指导
+ 
+
+--- slide 2 ---
+命令列表
+readelf
+objdump
+hexdump
+objcopy
+gcc
+gdb
+
+--- slide 3 ---
+gcc
+ 
+gcc
+ -E 
+test.c
+ -o 
+test.i
+   #
+预处理
+gcc
+ -S 
+test.i
+ -o 
+test.s
+   #
+编译汇编
+gcc -S -fverbose-asm test.c -o test.s   
+#
+编译汇编，含源码
+gcc
+ -c –g
+ 
+test.c
+ -o 
+test.o
+   #
+生成可重定位的目标文件
+gcc
+  -g 
+test.c
+ -o  test   #
+链接生成可执行文件
+gcc -g -D U1 main.c sub.c -o 
+main_sub
+ –static   
+静态链接
+
+--- slide 4 ---
+自带的帮助
+readelf
+  --help
+Usage: 
+readelf  <option(s)>  elf-file(s)
+ Options are:
+ -a --all                     Equivalent to: -h -l -S -s -r -d -V -A -I
+  -h --file-header       Display the ELF file header
+  -l --program-headers   Display the program headers
+      --segments            An alias for --program-headers
+  -S --section-headers  Display the sections' header
+       --sections              An alias for --section-headers
+  -g --section-groups    Display the section groups
+  -t --section-details      Display the section details
+  -e --headers               Equivalent to: -h -l -S
+  -s --
+syms
+                    Display the symbol table
+      --symbols                   An alias for --
+syms
+
+--- slide 5 ---
+自带的帮助
+ --
+dyn-syms
+        Display the dynamic symbol table
+ -n --notes        Display the core notes (if present)
+ -r --
+relocs
+       Display the relocations (if present)
+ -u --unwind       Display the unwind info (if present)
+ -d --dynamic      Display the dynamic section (if present)
+ -V --version-info Display the version sections
+ -A --arch-specific  Display architecture specific information 
+ -c --archive-index  Display the symbol/file index in an archive
+ -D --use-dynamic    Use the dynamic section info 
+                     when displaying symbols
+ -x --hex-dump=<
+number|name
+>
+        Dump the contents of section <
+number|name
+> as bytes
+ -p --string-dump=<
+number|name
+>
+        Dump the contents of section <
+number|name
+> as strings
+ -R --relocated-dump=<
+number|name
+>
+        Dump contents of section <
+number|name
+> as relocated bytes
+ -z --decompress        
+Decompress
+ section before dumping it
+
+--- slide 6 ---
+自带的帮助
+ -w[
+lLiaprmfFsoRtUuTgAckK
+] or
+ --
+debugdump
+[=
+rawline
+,=
+decodedline
+,=info,=abbrev,=
+pubnames
+,
+    =
+aranges
+,=macro,=frames,=
+framesinterp
+,=str,=loc,=Ranges,
+    =
+pubtypes
+,=
+gdb_index
+,=
+trace_info
+,=
+trace_abbrev
+,
+    =
+trace_aranges
+,=
+addr
+,=
+cu_index
+,=links,=follow-links]
+           Display the contents of DWARF debug sections
+ --dwarf-depth=N    Do not display DIEs at depth N or greater
+ --dwarf-start=N    Display DIEs starting with N, at the same
+                    depth or deeper
+ -I --histogram   Display histogram of bucket list lengths
+ 
+-W 
+--wide        Allow output width to exceed 80 characters
+ @<file>          Read options from <file>
+ -H --help        Display this information
+ -v --version     Display the version number of 
+readelf
+
+--- slide 7 ---
+可重定位目标文件的数据结构
+可重定位目标文件的组成
+     /
+usr
+/include/
+elf.h
+文件头  ：
+ELF 
+头    参见结构  ：
+Elf64_Ehdr
+节   表   ：对各个节描述，由描述项形成的表
+                                    参见结构  ： 
+Elf64_Shdr  
+节          ：节内的具体信息
+
+--- slide 8 ---
+显示文件头
+struct :  
+Elf64_Ehdr
+#readelf  -h   
+test.o
+        #readelf  --file-header   
+test.o
+
+--- slide 9 ---
+显示文件头
+readelf
+ -h 
+显示文字
+Elf64_Ehdr 
+字段名
+字段含义
+Magic
+e_ident[16]
+ELF 
+标识字节，包含魔数、
+64/32 
+位、大小端、
+ABI 
+等
+Type
+e_type
+文件类型（
+REL 
+可重定位、
+EXEC 
+可执行、
+DYN 
+动态库）
+Machine
+e_machine
+目标架构（
+x86-64、ARM、RISC-V 
+等）
+Version
+e_version
+ELF 
+版本号，通常为 
+1
+Entry point address
+e_entry
+程序入口虚拟地址（
+.o 
+文件一般为 
+0
+）
+Start of program headers
+e_phoff
+程序头表在文件中的偏移
+Start of section headers
+e_shoff
+节头表在文件中的偏移
+Flags
+e_flags
+处理器相关标志
+Size of this header
+e_ehsize
+ELF 
+文件头自身大小（
+64 
+位 
+ELF 
+固定 
+64 
+字节）
+Size of program headers
+e_phentsize
+单个程序头表项的大小
+Number of program headers
+e_phnum
+程序头表项总数
+Size of section headers
+e_shentsize
+单个节头表项的大小（
+64 
+位通常 
+64 
+字节）
+Number of section headers
+e_shnum
+节头表项总数
+Section header string table index
+e_shstrndx
+节名所在字符串表的节索引
+
+--- slide 10 ---
+readelf
+  -S  
+test.o
+readelf
+  --section-headers  
+test.o
+readelf
+  --sections  
+test.o
+readelf
+  -S  -W 
+test.o
+  
+以宽行的形式显示节头信息
+节头表数据结构            
+Elf64_Shdr
+显示节头表
+
+--- slide 11 ---
+显示节头表
+adelf -S 
+显示列名
+Elf64_Shdr 
+字段名
+字段含义
+Nr
+(
+索引
+)
+节的编号（非结构体字段，是顺序位置）
+Name
+sh_name
+节名（在节名字符串表中的偏移）
+Type
+sh_type
+节类型（如：
+PROGBITS, STRTAB, SYMTAB 
+等）
+Address
+sh_addr
+加载到内存时的虚拟地址（
+.o 
+文件通常为 
+0
+）
+Off
+sh_offset
+本节在文件中的字节偏移
+（定位数据的关键）
+Size
+sh_size
+本节在文件 
+/ 
+内存中的大小
+ES
+sh_entsize
+表项大小（若节是表结构，如符号表每个条目大小）
+Flg
+sh_flags
+节标志（
+W = 
+可写，
+A = 
+可加载，
+X = 
+可执行）
+Lk
+sh_link
+节链接信息（依赖的其他节索引）
+Inf
+sh_info
+附加信息（根据节类型不同而变化）
+Al
+sh_addralign
+地址对齐要求（如 
+4, 8, 16 
+字节对齐）
+
+--- slide 12 ---
+readelf
+  -x  .text  
+test.o
+显示代码节中的内容       以 
+16
+进制字节形式显示
+显示某个节中的内容
+ 
+# readelf -x 1 test.o           
+.text 
+节的编号为 
+1
+    Hex dump of section '.text‘: 
+    ………
+
+--- slide 13 ---
+显示代码节中的内容       以 
+16
+进制字节形式显示
+显示某个节中的内容
+ 
+# 
+objcopy
+ -O binary --only-section=.text  
+test.o
+ /dev/
+stdout
+ | 
+hexdump
+ -C
+ 
+# 
+objdump
+ –d 
+test.o
+请比较两个命令执行结果
+
+--- slide 14 ---
+readelf
+  -x  .data  
+test.o
+显示数据节中的内容       以 
+16
+进制字节形式显示
+显示某个节中的内容
+说明：程序中有三个全局变量，但只有 
+2
+个初始化了。
+int gx=20;
+int gy;
+int gz=30
+;
+逐字节显示（字节与字节之间有空格）
+objcopy
+ 
+-O
+ binary --only-section
+=
+.data 
+test.o
+ /dev/
+stdout
+ 
+|
+ 
+hexdump
+ 
+-C
+objdump  -s  --section=.data  main.o
+
+--- slide 15 ---
+显示字符串节中的内容       以 字符串的形式显示
+显示某个节中的内容
+
+--- slide 16 ---
+显示节头部字符串节中的内容       以 字符串的形式显示
+显示某个节中的内容
+
+--- slide 17 ---
+Q: 
+节头表中的名字个数 与 
+shstrtab
+ 
+中的不一致？
+显示某个节中的内容
+.text
+ 就是 
+.
+rela.text
+ 
+中后面的一部分！
+.
+data.rel.local
+ 是 
+.
+rela.data.rel.local
+ 
+的尾部！
+.
+debug_info
+ 是  
+.
+rela.debug_info
+ 
+的尾部！
+
+--- slide 18 ---
+显示符号表       
+Elf64_Sym
+       
+    #readelf  -s  
+test.o
+显示符号表中的内容
+说明：开始的一部分符号是 文件名、节名
+
+--- slide 19 ---
+显示符号表中的内容
+说明：程序中用到的符号
+
+--- slide 20 ---
+显示符号表中的内容
+readelf -s 
+列名
+Elf64_Sym 
+字段
+字段类型
+含义说明
+Num
+—
+—
+符号表中的条目序号，不是结构体字段
+Value
+st_value
+Elf64_Addr
+符号的值：变量地址、函数入口、或 
+ABS 
+常量
+Size
+st_size
+uint64_t
+符号占用字节数，变量大小 
+/ 
+函数长度
+Type
+st_info
+ 低 4 位
+uint8_t
+符号类型：
+NOTYPE、OBJECT、FUNC、SECTION、FILE 
+等
+Bind
+st_info
+ 高 4 位
+uint8_t
+绑定属性：
+LOCAL（
+本文件可见）、
+GLOBAL（
+全局可见）、
+WEAK
+Vis
+st_other
+uint8_t
+可见性：
+DEFAULT、HIDDEN、PROTECTED 
+等
+Ndx
+st_shndx
+uint16_t
+符号所在节的编号：
+・数字 → 对应节号
+・
+ABS → 
+绝对符号
+・
+UND → 
+未定义符号
+Name
+st_name
+uint32_t
+符号名在字符串表（
+.
+strtab
+）
+中的偏移
+
+--- slide 21 ---
+    #readelf  -s  
+test.o
+  |  awk ‘$7==
+节号 
+|| NR==
+行号
+’
+显示符号表 中属于某个节的符号
+awk
+   
+是用来 “按列筛选文本” 的神器
+。
+      
+readelf
+ -s
+ 输出的内容是
+一排一排、一列一列
+的，
+      awk 
+就是帮你按列筛选，只留下你要的行。
+$1              $2                           $3       $4             $5          $6              $7      $8     
+NR = Number of Record = 
+行号
+,   
+      
+就是保留 
+readelf
+  –s   
+输出的指定行号的内容   
+#readelf  -s  
+test.o
+  |  awk '$7==3
+ 
+|| NR==3’
+     
+保留节号为
+3
+的行， 以及 第
+3
+行
+#readelf  -s  
+test.o
+  |  awk ‘$7==
+“UND”
+’
+     显示未定义符号
+
+--- slide 22 ---
+显示
+.text 
+的重定位节内容       
+Elf64_Rela;
+     
+readelf
+  -R  .
+rela.text
+  
+test.o
+显示代码节重定位节中的内容
+
+--- slide 23 ---
+显示重定位节
+     
+readelf
+  -r  
+test.o
+      (
+各重定位节都显示
+)
+显示代码节重定位节中的内容
+readelf -r 
+列名
+Elf64_Rela 
+字段
+字段类型
+含义说明
+OFFSET
+r_offset
+Elf64_Addr
+需要被重定位修改的位置
+即：在 
+.
+text/.data 
+等节内的
+字节偏移
+INFO
+r_info
+Elf64_Xword
+复合字段：
+・低 
+32 
+位：
+重定位类型
+（如 
+R_X86_64_64、R_X86_64_PC32）
+・
+高 
+32 
+位：
+符号表索引
+（对应 
+readelf -s 
+里的符号序号）
+TYPE
+从 
+r_info
+ 
+解析
+—
+重定位计算方式（由链接器 
+/ 
+加载器解释）
+SYMBOL
+从 
+r_info
+ 
+解析
+—
+要引用的符号名（通过符号表索引找到）
+ADDEND
+r_addend
+Elf64_Sxword
+有符号常量加数
+最终值 
+= 
+符号地址 
++ 
+r_addend
+
+--- slide 24 ---
+显示 
+. 
+rela.text
+ 
+重定位节
+     
+readelf
+  -r  
+test.o
+  | grep –A  20  “
+rela.text
+”
+     -A 20  
+显示 
+20
+行
+显示代码节重定位节中的内容
+
+--- slide 25 ---
+你想做什么操作？ 你想达到什么效果？
+不会做，问豆包等
+不理解豆包的回答，再问豆包
+如果按照回答操作，未达到相应的效果，
+可给出更详细的信息，再次问豆包
+学会求助

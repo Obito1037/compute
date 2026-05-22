@@ -1,0 +1,7 @@
+flowchart TB
+    A[高地址] --> B[调用者栈帧]
+    B --> C[返回地址 saved RIP]
+    C --> D[保存的 RBP]
+    D --> E[局部变量区]
+    E --> F[缓冲区 buf]
+    F --> G[低地址]

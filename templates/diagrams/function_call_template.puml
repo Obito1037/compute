@@ -1,0 +1,10 @@
+@startuml
+skinparam monochrome true
+participant main
+participant CFunction
+participant ASMFunction
+main -> CFunction: call
+CFunction -> ASMFunction: call
+ASMFunction --> CFunction: return
+CFunction --> main: return
+@enduml

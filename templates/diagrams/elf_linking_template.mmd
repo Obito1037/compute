@@ -1,0 +1,6 @@
+flowchart LR
+    C[main.c / sub.c] --> I[预处理 .i]
+    I --> S[编译 .s]
+    S --> O[汇编 .o]
+    O --> L[链接 ELF]
+    L --> R[运行时装载]

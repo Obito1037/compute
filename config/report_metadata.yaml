@@ -1,0 +1,18 @@
+# 计算机系统基础实验总报告封面信息
+# Codex 只能读取本文件生成封面；不得从聊天历史、文件名、Git 配置或上下文猜测个人信息。
+# 若任一字段为“待填写”或空值，Codex 必须停下来向用户确认，不得自行补全。
+
+course_name: "计算机系统基础"
+college: "计算机科学与技术学院"
+major_class: "计算机2401班"
+student_id: "U202414558"
+student_name: "张家梁"
+instructor: "张宇"
+report_date: "2026年5月23日"
+github_repo: "git@github.com:Obito1037/compute.git"
+
+# 可选字段，不确定也不得猜测。
+school: "华中科技大学"
+latex_engine: "xelatex"
+tex_distribution: "TeX Live 2026"
+metadata_confirmed_by_user: true

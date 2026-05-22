@@ -1,0 +1,26 @@
+# build artifacts
+report/build/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# binaries
+*.exe
+*.o
+*.obj
+*.ilk
+*.pdb
+*.idb
+*.suo
+*.user
+
+# generated temp
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# optional large raw captures
+captures/

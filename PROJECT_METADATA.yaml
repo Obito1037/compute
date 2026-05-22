@@ -1,0 +1,26 @@
+course_name: 计算机系统基础
+school: 华中科技大学
+college: 计算机科学与技术学院
+major_class: ""
+student_name: ""
+student_id: ""
+student_id_last_digit: ""
+instructor: ""
+report_date: ""
+latex_engine: xelatex
+tex_distribution: TeX Live 2026
+output_pdf: true
+output_word: true
+
+skill_reference_mode: adapted_not_copied
+external_skill_docs:
+  - docs/external_skill_reference_inventory.md
+  - docs/external_skill_enablement_guide.md
+  - docs/skill_safety_policy.md
+added_reference_skills:
+  - 11_latex_build_preview_checker
+  - 12_mermaid_diagram_generator_validator
+  - 13_markdown_document_converter
+  - 14_git_github_workflow_manager
+  - 15_codebase_walkthrough_generator
+  - 16_external_skill_safety_auditor
