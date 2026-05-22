@@ -37,3 +37,7 @@
 | C033 | 2026-05-23 01:04:44 +08:00 | 项目根目录 | `git init` | 根据用户“授权”初始化本地 Git 仓库 | `.git/` | 已完成 |
 | C034 | 2026-05-23 01:04:44 +08:00 | 项目根目录 | `git status --short --ignored`；`git config --get user.name`；`git config --get user.email`；`git ls-files --others --exclude-standard` | 检查将纳入提交的文件、已忽略的构建产物和 Git 作者配置 | 终端输出 | 已完成；常规构建产物被忽略，`phases.o` 需强制纳入 |
 | C035 | 2026-05-23 01:04:44 +08:00 | 项目根目录 | `git add -A`；`git add -f ... phases.o`；`git reset -- "**/Debug/**"` | 暂存首个提交，强制纳入二进制炸弹必需的 `phases.o`，并从提交中移除本地 `Debug/` 编译中间目录 | Git 暂存区 | 已完成 |
+| C036 | 2026-05-23 01:04:44 +08:00 | 项目根目录 | `git commit -m "project: initialize lab workspace and lab01 evidence"` | 创建首个本地提交，保存项目启动检查、实验一要求摘要、源码工作副本和已验证证据 | Git 提交历史 | 已完成：`5a5f47f` |
+| C037 | 2026-05-23 01:10:12 +08:00 | 项目根目录 | `git branch -M main` | 将默认分支名设置为 `main` | Git 分支 | 已完成 |
+| C038 | 2026-05-23 01:10:12 +08:00 | 项目根目录 | `git remote add origin git@github.com:Obito1037/compute.git` | 根据用户明确提供并授权的仓库地址设置远程仓库 | Git 远程配置 | 已完成 |
+| C039 | 2026-05-23 01:10:12 +08:00 | 项目根目录 | `git push -u origin main` | 将首个提交推送到 GitHub，并建立 `main` 到 `origin/main` 的跟踪关系 | GitHub 远程仓库 | 已完成：`main -> main` |
