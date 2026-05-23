@@ -1,0 +1,31 @@
+Breakpoint 1 at 0x401ba7: file buf.c, line 128.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+--- getbuf stack probe ---
+rbp = $1 = 0x7fffffffdde0
+rsp = $2 = 0x7fffffffdda0
+buf = rbp-0x30 = $3 = 0x7fffffffddb0
+saved rbp slot = rbp = $4 = 0x7fffffffdde0
+return address slot = rbp+8 = $5 = 0x7fffffffdde8
+saved rbp value = 0x7fffffffdde0:	0x00007fffffffde20
+return address value = 0x7fffffffdde8:	0x00000000004015b8
+===== 自动生成的唯一随机代码 =====
+随机ID(十进制)：1737751066
+随机代码(十六进制)：6793FA1A
+编译时间：May 23 2026 11:09:12
+
+user id : U202414558 
+cookie : 0xc1099de 
+hex string file : ../../outputs/lab04_probe_minimal_hex_20260523.txt 
+level : 0 
+smoke : 0x0x401434   fizz : 0x0x401451  bang : 0x0x4014a5 
+welcome  U202414558 
+Dud: getbuf returned 0x1
+bye bye , U202414558
+[Inferior 1 (process 691) exited normally]

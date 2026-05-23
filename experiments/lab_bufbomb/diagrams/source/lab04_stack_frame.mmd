@@ -1,0 +1,9 @@
+flowchart TD
+    A["higher addresses"] --> B["return address at rbp+8, offset 56 from buf"]
+    B --> C["saved rbp at rbp, offset 48 from buf"]
+    C --> D["temp8 at rbp-0x8"]
+    D --> E["unused/padding"]
+    E --> F["buf[32] starts at rbp-0x30"]
+    F --> G["src pointer at rbp-0x38"]
+    G --> H["len at rbp-0x3c"]
+    H --> I["lower addresses"]

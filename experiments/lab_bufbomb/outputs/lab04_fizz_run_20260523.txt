@@ -1,0 +1,12 @@
+===== 自动生成的唯一随机代码 =====
+随机ID(十进制)：1737751066
+随机代码(十六进制)：6793FA1A
+编译时间：May 23 2026 11:09:12
+
+user id : U202414558 
+cookie : 0xc1099de 
+hex string file : ../../outputs/lab04_fizz_hex_20260523.txt 
+level : 1 
+smoke : 0x0x401434   fizz : 0x0x401451  bang : 0x0x4014a5 
+welcome  U202414558 
+Fizz!: You called fizz(0xc1099de)

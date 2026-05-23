@@ -1,0 +1,9 @@
+flowchart LR
+    A["hex attack file"] --> B["convert_to_byte_string"]
+    B --> C["getbuf"]
+    C --> D["Gets copies bytes into buf"]
+    D --> E["overwrite saved rbp and return address"]
+    E --> F["smoke: ret to smoke"]
+    E --> G["fizz: fake rbp then ret to fizz+0xb"]
+    E --> H["bang: ret to injected stack code, write global_value, jump bang"]
+    E --> I["boom: ret to injected stack code, set eax, jump back to test"]
