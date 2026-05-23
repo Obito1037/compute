@@ -1,0 +1,82 @@
+COMMAND: objdump -d -M intel --disassemble=main sub_main
+
+sub_main:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+00000000000013f9 <main>:
+    13f9:	f3 0f 1e fa          	endbr64
+    13fd:	55                   	push   rbp
+    13fe:	48 89 e5             	mov    rbp,rsp
+    1401:	48 83 ec 10          	sub    rsp,0x10
+    1405:	48 8d 05 14 2c 00 00 	lea    rax,[rip+0x2c14]        # 4020 <init_gstr1>
+    140c:	48 89 c7             	mov    rdi,rax
+    140f:	e8 0d fe ff ff       	call   1221 <check_gcc_condition>
+    1414:	b8 00 00 00 00       	mov    eax,0x0
+    1419:	e8 e4 fe ff ff       	call   1302 <fcount>
+    141e:	b8 00 00 00 00       	mov    eax,0x0
+    1423:	e8 da fe ff ff       	call   1302 <fcount>
+    1428:	90                   	nop
+    1429:	90                   	nop
+    142a:	90                   	nop
+    142b:	90                   	nop
+    142c:	90                   	nop
+    142d:	90                   	nop
+    142e:	90                   	nop
+    142f:	90                   	nop
+    1430:	c7 45 f4 0f 00 00 00 	mov    DWORD PTR [rbp-0xc],0xf
+    1437:	c7 45 f8 11 00 00 00 	mov    DWORD PTR [rbp-0x8],0x11
+    143e:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    1445:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+    1448:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    144b:	01 d0                	add    eax,edx
+    144d:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    1450:	c7 05 be 2b 00 00 14 	mov    DWORD PTR [rip+0x2bbe],0x14        # 4018 <init_gv1>
+    1457:	00 00 00 
+    145a:	8b 05 b8 2b 00 00    	mov    eax,DWORD PTR [rip+0x2bb8]        # 4018 <init_gv1>
+    1460:	89 05 fa 2b 00 00    	mov    DWORD PTR [rip+0x2bfa],eax        # 4060 <uninit_gv2>
+    1466:	c7 05 f8 2b 00 00 7a 	mov    DWORD PTR [rip+0x2bf8],0x6c6a7a        # 4068 <uninit_gstr2>
+    146d:	6a 6c 00 
+    1470:	c7 05 96 2b 00 00 15 	mov    DWORD PTR [rip+0x2b96],0x15        # 4010 <extern_int>
+    1477:	00 00 00 
+    147a:	48 8d 05 9f 2b 00 00 	lea    rax,[rip+0x2b9f]        # 4020 <init_gstr1>
+    1481:	48 89 c6             	mov    rsi,rax
+    1484:	48 8d 05 9d 0c 00 00 	lea    rax,[rip+0xc9d]        # 2128 <_IO_stdin_used+0x128>
+    148b:	48 89 c7             	mov    rdi,rax
+    148e:	b8 00 00 00 00       	mov    eax,0x0
+    1493:	e8 28 fc ff ff       	call   10c0 <printf@plt>
+    1498:	8b 05 7a 2b 00 00    	mov    eax,DWORD PTR [rip+0x2b7a]        # 4018 <init_gv1>
+    149e:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+    14a1:	89 d6                	mov    esi,edx
+    14a3:	89 c7                	mov    edi,eax
+    14a5:	e8 1f fd ff ff       	call   11c9 <fadd>
+    14aa:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    14ad:	be 1e 00 00 00       	mov    esi,0x1e
+    14b2:	bf 32 00 00 00       	mov    edi,0x32
+    14b7:	e8 8e fe ff ff       	call   134a <fsub>
+    14bc:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    14bf:	48 8b 05 8a 2b 00 00 	mov    rax,QWORD PTR [rip+0x2b8a]        # 4050 <init_gfp1>
+    14c6:	be 1e 00 00 00       	mov    esi,0x1e
+    14cb:	bf 32 00 00 00       	mov    edi,0x32
+    14d0:	ff d0                	call   rax
+    14d2:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    14d5:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    14d8:	89 c6                	mov    esi,eax
+    14da:	48 8d 05 61 0c 00 00 	lea    rax,[rip+0xc61]        # 2142 <_IO_stdin_used+0x142>
+    14e1:	48 89 c7             	mov    rdi,rax
+    14e4:	b8 00 00 00 00       	mov    eax,0x0
+    14e9:	e8 d2 fb ff ff       	call   10c0 <printf@plt>
+    14ee:	b8 00 00 00 00       	mov    eax,0x0
+    14f3:	c9                   	leave
+    14f4:	c3                   	ret
+
+Disassembly of section .fini:

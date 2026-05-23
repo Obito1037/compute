@@ -1,0 +1,8 @@
+flowchart LR
+    C["main.c / sub.c"] --> P["gcc -E: main.i"]
+    P --> S["gcc -S -fverbose-asm: main.s"]
+    S --> O["gcc -c -g: main.o / sub.o"]
+    O --> DYN["dynamic PIE: main_sub / sub_main"]
+    O --> STA["static executable: main_sub_static"]
+    DYN --> RUN["run output and dynamic relocation evidence"]
+    STA --> RUN

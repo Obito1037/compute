@@ -1,0 +1,9 @@
+COMMAND: readelf -x .rodata main.o
+
+Hex dump of section '.rodata':
+  0x00000000 6175746f 2078203d 20256420 2c207374 auto x = %d , st
+  0x00000010 61746963 20636f75 6e74203d 25640a00 atic count =%d..
+  0x00000020 64697370 6c617920 696e6974 5f677374 display init_gst
+  0x00000030 7231203a 20257320 0a007375 6d203d20 r1 : %s ..sum = 
+  0x00000040 2564200a 00                         %d ..
+

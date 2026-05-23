@@ -1,0 +1,14 @@
+COMMANDS: environment inspection
+2026-05-23T11:43:46+08:00
+Linux TwSee 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.1 LTS
+Release:	24.04
+Codename:	noble
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+GNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1
+GNU readelf (GNU Binutils for Ubuntu) 2.42
+GNU objdump (GNU Binutils for Ubuntu) 2.42
+GNU objcopy (GNU Binutils for Ubuntu) 2.42
+hexdump from util-linux 2.39.3
+file-5.45

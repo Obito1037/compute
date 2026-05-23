@@ -1,0 +1,3 @@
+COMMAND: gcc -c -g -D U8 sub.c -o sub.o
+exit_code=0
+sub.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), with debug_info, not stripped

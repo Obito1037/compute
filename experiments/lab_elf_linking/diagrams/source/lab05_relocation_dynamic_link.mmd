@@ -1,0 +1,22 @@
+flowchart TB
+    OBJ["main.o"]
+    SYM[".symtab / .strtab"]
+    RELTEXT[".rela.text"]
+    RELDATA[".rela.data.rel.local / .rela.data.rel"]
+    LINK["linker resolves local definitions and external references"]
+    EXE["main_sub PIE"]
+    PLT[".plt / .got"]
+    DYNSYM[".dynsym / .rela.plt"]
+    LIBC["libc.so.6 printf"]
+
+    OBJ --> SYM
+    OBJ --> RELTEXT
+    OBJ --> RELDATA
+    SYM --> LINK
+    RELTEXT --> LINK
+    RELDATA --> LINK
+    LINK --> EXE
+    EXE --> PLT
+    EXE --> DYNSYM
+    PLT --> LIBC
+    DYNSYM --> LIBC

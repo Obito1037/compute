@@ -1,0 +1,133 @@
+﻿  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:20:uninit_gv2:
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:21:	.zero	4
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:22:	.globl	init_gstr1
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:23:	.data
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:24:	.align 8
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:25:	.type	init_gstr1, @object
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:26:	.size	init_gstr1, 12
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:27:init_gstr1:
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:28:	.string	"U202414558"
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:29:	.zero	1
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:30:	.globl	uninit_gstr2
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:31:	.bss
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:32:	.align 8
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:33:	.type	uninit_gstr2, @object
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:34:	.size	uninit_gstr2, 12
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:35:uninit_gstr2:
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:36:	.zero	12
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:37:	.globl	init_garr1
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:124:	movq	%rax, %rdi	# tmp86,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:125:	movl	$0, %eax	#,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:126:	call	printf@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:127:# main.c:33: }
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:128:	nop	
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:129:	leave	
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:130:	.cfi_def_cfa 7, 8
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:172:	movq	%rax, %rdi	# tmp87,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:173:	movl	$0, %eax	#,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:174:	call	printf@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:175:# main.c:42:     result = x -y;
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:176:	movl	-68(%rbp), %eax	# x, tmp91
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:193:	.section	.rodata
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:194:.LC1:
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:195:	.string	"display init_gstr1 : %s \n"
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:196:.LC2:
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:197:	.string	"sum = %d \n"
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:209:	.cfi_def_cfa_register 6
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:210:	subq	$16, %rsp	#,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:211:# main.c:48:      check_gcc_condition(init_gstr1);   //检查学号与条件编译是否一致
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:212:	leaq	init_gstr1(%rip), %rax	#, tmp87
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:213:	movq	%rax, %rdi	# tmp87,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:214:	call	check_gcc_condition@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:219:	movl	$0, %eax	#,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:220:	call	fcount	#
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:221:# main.c:51:      __asm__  __volatile__(".rept 8 \n nop \n .endr \n");  // 改写源程序，将 5 换成学号的最后1位
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:222:#APP
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:223:# 51 "main.c" 1
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:224:	.rept 8 
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:225: nop 
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:226: .endr 
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:227:
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:228:# 0 "" 2
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:229:# main.c:53:      int  lv1=15;
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:230:#NO_APP
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:231:	movl	$15, -12(%rbp)	#, lv1
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:232:# main.c:54:      int  lv2 = 17;
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:244:	movl	init_gv1(%rip), %eax	# init_gv1, init_gv1.4_1
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:245:	movl	%eax, uninit_gv2(%rip)	# init_gv1.4_1, uninit_gv2
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:246:# main.c:59:      strcpy(uninit_gstr2,"zjl");   // 请换成自己的姓名拼音
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:247:	movl	$7105146, uninit_gstr2(%rip)	#, MEM <char[1:4]> [(void *)&uninit_gstr2]
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:248:# main.c:61:      extern_int =21;
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:249:	movl	$21, extern_int(%rip)	#, extern_int
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:250:# main.c:62:      printf("display init_gstr1 : %s \n", init_gstr1);
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:251:	leaq	init_gstr1(%rip), %rax	#, tmp94
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:252:	movq	%rax, %rsi	# tmp94,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:253:	leaq	.LC1(%rip), %rax	#, tmp95
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:254:	movq	%rax, %rdi	# tmp95,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:255:	movl	$0, %eax	#,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:256:	call	printf@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:257:# main.c:63:      sum = fadd(init_gv1, lv1);
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:258:	movl	init_gv1(%rip), %eax	# init_gv1, init_gv1.5_2
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:260:	movl	%edx, %esi	# tmp96,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:261:	movl	%eax, %edi	# init_gv1.5_2,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:262:	call	fadd@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:263:	movl	%eax, -4(%rbp)	# tmp97, sum
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:264:# main.c:64:      sum = fsub(50,30);
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:279:	movq	%rax, %rdi	# tmp101,
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:280:	movl	$0, %eax	#,
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:281:	call	printf@PLT	#
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:282:# main.c:67:      return 0;
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_verbose_20260523.s:283:	movl	$0, %eax	#, _25
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:18: 11c:	b8 00 00 00 00       	mov    eax,0x0
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:19: 121:	e8 00 00 00 00       	call   126 <main+0x2f>
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:20: 126:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:21: 127:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:22: 128:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:23: 129:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:24: 12a:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:25: 12b:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:26: 12c:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:27: 12d:	90                   	nop
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:28: 12e:	c7 45 f4 0f 00 00 00 	mov    DWORD PTR [rbp-0xc],0xf
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_o_main_disasm_20260523.txt:29: 135:	c7 45 f8 11 00 00 00 	mov    DWORD PTR [rbp-0x8],0x11
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:19:    12c5:	48 89 e5             	mov    rbp,rsp
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:20:    12c8:	48 83 ec 10          	sub    rsp,0x10
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:21:    12cc:	48 8d 05 45 2d 00 00 	lea    rax,[rip+0x2d45]        # 4018 <init_gstr1>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:22:    12d3:	48 89 c7             	mov    rdi,rax
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:23:    12d6:	e8 39 01 00 00       	call   1414 <check_gcc_condition>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:26:    12e5:	b8 00 00 00 00       	mov    eax,0x0
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:27:    12ea:	e8 da fe ff ff       	call   11c9 <fcount>
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:28:    12ef:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:29:    12f0:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:30:    12f1:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:31:    12f2:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:32:    12f3:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:33:    12f4:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:34:    12f5:	90                   	nop
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:35:    12f6:	90                   	nop
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:36:    12f7:	c7 45 f4 0f 00 00 00 	mov    DWORD PTR [rbp-0xc],0xf
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:37:    12fe:	c7 45 f8 11 00 00 00 	mov    DWORD PTR [rbp-0x8],0x11
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:45:    1321:	8b 05 e9 2c 00 00    	mov    eax,DWORD PTR [rip+0x2ce9]        # 4010 <init_gv1>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:46:    1327:	89 05 33 2d 00 00    	mov    DWORD PTR [rip+0x2d33],eax        # 4060 <uninit_gv2>
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:47:    132d:	c7 05 31 2d 00 00 7a 	mov    DWORD PTR [rip+0x2d31],0x6c6a7a        # 4068 <uninit_gstr2>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:48:    1334:	6a 6c 00 
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:49:    1337:	c7 05 0f 2d 00 00 15 	mov    DWORD PTR [rip+0x2d0f],0x15        # 4050 <extern_int>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:50:    133e:	00 00 00 
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:51:    1341:	48 8d 05 d0 2c 00 00 	lea    rax,[rip+0x2cd0]        # 4018 <init_gstr1>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:52:    1348:	48 89 c6             	mov    rsi,rax
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:53:    134b:	48 8d 05 d6 0c 00 00 	lea    rax,[rip+0xcd6]        # 2028 <_IO_stdin_used+0x28>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:54:    1352:	48 89 c7             	mov    rdi,rax
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:55:    1355:	b8 00 00 00 00       	mov    eax,0x0
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:56:    135a:	e8 61 fd ff ff       	call   10c0 <printf@plt>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:57:    135f:	8b 05 ab 2c 00 00    	mov    eax,DWORD PTR [rip+0x2cab]        # 4010 <init_gv1>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:58:    1365:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:59:    1368:	89 d6                	mov    esi,edx
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:60:    136a:	89 c7                	mov    edi,eax
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:61:    136c:	e8 4b 00 00 00       	call   13bc <fadd>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:62:    1371:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:63:    1374:	be 1e 00 00 00       	mov    esi,0x1e
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:75:    13a8:	48 89 c7             	mov    rdi,rax
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:76:    13ab:	b8 00 00 00 00       	mov    eax,0x0
+> D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:77:    13b0:	e8 0b fd ff ff       	call   10c0 <printf@plt>
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:78:    13b5:	b8 00 00 00 00       	mov    eax,0x0
+  D:\desktop\hust-computer-system-foundation-labs-no-guess\experiments\lab_elf_linking\outputs\lab05_main_sub_main_disasm_20260523.txt:79:    13ba:	c9                   	leave

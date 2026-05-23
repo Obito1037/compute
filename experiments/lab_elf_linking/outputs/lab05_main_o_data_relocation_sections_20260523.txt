@@ -1,0 +1,26 @@
+COMMAND: readelf -x relocation-related sections
+--- .data.rel.local ---
+
+Hex dump of section '.data.rel.local':
+ NOTE: This section has relocations against it, but these have NOT been applied to this dump.
+  0x00000000 00000000 00000000 00000000 00000000 ................
+
+--- .rela.data.rel.local ---
+
+Hex dump of section '.rela.data.rel.local':
+  0x00000000 00000000 00000000 01000000 0c000000 ................
+  0x00000010 00000000 00000000 08000000 00000000 ................
+  0x00000020 01000000 0d000000 00000000 00000000 ................
+
+--- .data.rel ---
+
+Hex dump of section '.data.rel':
+ NOTE: This section has relocations against it, but these have NOT been applied to this dump.
+  0x00000000 00000000 00000000                   ........
+
+--- .rela.data.rel ---
+
+Hex dump of section '.rela.data.rel':
+  0x00000000 00000000 00000000 01000000 16000000 ................
+  0x00000010 00000000 00000000                   ........
+

@@ -1,0 +1,166 @@
+COMMAND: objdump -dr -M intel main.o
+
+main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <fcount>:
+   0:	f3 0f 1e fa          	endbr64
+   4:	55                   	push   rbp
+   5:	48 89 e5             	mov    rbp,rsp
+   8:	48 83 ec 10          	sub    rsp,0x10
+   c:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+  13:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+  17:	8b 05 00 00 00 00    	mov    eax,DWORD PTR [rip+0x0]        # 1d <fcount+0x1d>
+			19: R_X86_64_PC32	.bss+0x34
+  1d:	83 c0 01             	add    eax,0x1
+  20:	89 05 00 00 00 00    	mov    DWORD PTR [rip+0x0],eax        # 26 <fcount+0x26>
+			22: R_X86_64_PC32	.bss+0x34
+  26:	8b 15 00 00 00 00    	mov    edx,DWORD PTR [rip+0x0]        # 2c <fcount+0x2c>
+			28: R_X86_64_PC32	.bss+0x34
+  2c:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  2f:	89 c6                	mov    esi,eax
+  31:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 38 <fcount+0x38>
+			34: R_X86_64_PC32	.rodata-0x4
+  38:	48 89 c7             	mov    rdi,rax
+  3b:	b8 00 00 00 00       	mov    eax,0x0
+  40:	e8 00 00 00 00       	call   45 <fcount+0x45>
+			41: R_X86_64_PLT32	printf-0x4
+  45:	90                   	nop
+  46:	c9                   	leave
+  47:	c3                   	ret
+
+0000000000000048 <fsub>:
+  48:	f3 0f 1e fa          	endbr64
+  4c:	55                   	push   rbp
+  4d:	48 89 e5             	mov    rbp,rsp
+  50:	48 83 ec 50          	sub    rsp,0x50
+  54:	89 7d bc             	mov    DWORD PTR [rbp-0x44],edi
+  57:	89 75 b8             	mov    DWORD PTR [rbp-0x48],esi
+  5a:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+  61:	00 00 
+  63:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+  67:	31 c0                	xor    eax,eax
+  69:	48 b8 73 74 61 74 69 	movabs rax,0x6620636974617473
+  70:	63 20 66 
+  73:	48 ba 73 75 62 20 3a 	movabs rdx,0x6e75203a20627573
+  7a:	20 75 6e 
+  7d:	48 89 45 d0          	mov    QWORD PTR [rbp-0x30],rax
+  81:	48 89 55 d8          	mov    QWORD PTR [rbp-0x28],rdx
+  85:	48 b8 69 6e 69 74 5f 	movabs rax,0x3276675f74696e69
+  8c:	67 76 32 
+  8f:	48 ba 20 3d 20 25 64 	movabs rdx,0xa206425203d20
+  96:	20 0a 00 
+  99:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  9d:	48 89 55 e8          	mov    QWORD PTR [rbp-0x18],rdx
+  a1:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # a8 <fsub+0x60>
+			a4: R_X86_64_PC32	uninit_gv2-0x4
+  a8:	48 89 05 00 00 00 00 	mov    QWORD PTR [rip+0x0],rax        # af <fsub+0x67>
+			ab: R_X86_64_PC32	uninit_gp2-0x4
+  af:	48 8b 05 00 00 00 00 	mov    rax,QWORD PTR [rip+0x0]        # b6 <fsub+0x6e>
+			b2: R_X86_64_PC32	uninit_gp2-0x4
+  b6:	c7 00 0c 00 00 00    	mov    DWORD PTR [rax],0xc
+  bc:	8b 15 00 00 00 00    	mov    edx,DWORD PTR [rip+0x0]        # c2 <fsub+0x7a>
+			be: R_X86_64_PC32	uninit_gv2-0x4
+  c2:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  c6:	89 d6                	mov    esi,edx
+  c8:	48 89 c7             	mov    rdi,rax
+  cb:	b8 00 00 00 00       	mov    eax,0x0
+  d0:	e8 00 00 00 00       	call   d5 <fsub+0x8d>
+			d1: R_X86_64_PLT32	printf-0x4
+  d5:	8b 45 bc             	mov    eax,DWORD PTR [rbp-0x44]
+  d8:	2b 45 b8             	sub    eax,DWORD PTR [rbp-0x48]
+  db:	89 45 cc             	mov    DWORD PTR [rbp-0x34],eax
+  de:	8b 45 cc             	mov    eax,DWORD PTR [rbp-0x34]
+  e1:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  e5:	64 48 2b 14 25 28 00 	sub    rdx,QWORD PTR fs:0x28
+  ec:	00 00 
+  ee:	74 05                	je     f5 <fsub+0xad>
+  f0:	e8 00 00 00 00       	call   f5 <fsub+0xad>
+			f1: R_X86_64_PLT32	__stack_chk_fail-0x4
+  f5:	c9                   	leave
+  f6:	c3                   	ret
+
+00000000000000f7 <main>:
+  f7:	f3 0f 1e fa          	endbr64
+  fb:	55                   	push   rbp
+  fc:	48 89 e5             	mov    rbp,rsp
+  ff:	48 83 ec 10          	sub    rsp,0x10
+ 103:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 10a <main+0x13>
+			106: R_X86_64_PC32	init_gstr1-0x4
+ 10a:	48 89 c7             	mov    rdi,rax
+ 10d:	e8 00 00 00 00       	call   112 <main+0x1b>
+			10e: R_X86_64_PLT32	check_gcc_condition-0x4
+ 112:	b8 00 00 00 00       	mov    eax,0x0
+ 117:	e8 00 00 00 00       	call   11c <main+0x25>
+			118: R_X86_64_PLT32	fcount-0x4
+ 11c:	b8 00 00 00 00       	mov    eax,0x0
+ 121:	e8 00 00 00 00       	call   126 <main+0x2f>
+			122: R_X86_64_PLT32	fcount-0x4
+ 126:	90                   	nop
+ 127:	90                   	nop
+ 128:	90                   	nop
+ 129:	90                   	nop
+ 12a:	90                   	nop
+ 12b:	90                   	nop
+ 12c:	90                   	nop
+ 12d:	90                   	nop
+ 12e:	c7 45 f4 0f 00 00 00 	mov    DWORD PTR [rbp-0xc],0xf
+ 135:	c7 45 f8 11 00 00 00 	mov    DWORD PTR [rbp-0x8],0x11
+ 13c:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+ 143:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+ 146:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+ 149:	01 d0                	add    eax,edx
+ 14b:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+ 14e:	c7 05 00 00 00 00 14 	mov    DWORD PTR [rip+0x0],0x14        # 158 <main+0x61>
+ 155:	00 00 00 
+			150: R_X86_64_PC32	init_gv1-0x8
+ 158:	8b 05 00 00 00 00    	mov    eax,DWORD PTR [rip+0x0]        # 15e <main+0x67>
+			15a: R_X86_64_PC32	init_gv1-0x4
+ 15e:	89 05 00 00 00 00    	mov    DWORD PTR [rip+0x0],eax        # 164 <main+0x6d>
+			160: R_X86_64_PC32	uninit_gv2-0x4
+ 164:	c7 05 00 00 00 00 7a 	mov    DWORD PTR [rip+0x0],0x6c6a7a        # 16e <main+0x77>
+ 16b:	6a 6c 00 
+			166: R_X86_64_PC32	uninit_gstr2-0x8
+ 16e:	c7 05 00 00 00 00 15 	mov    DWORD PTR [rip+0x0],0x15        # 178 <main+0x81>
+ 175:	00 00 00 
+			170: R_X86_64_PC32	extern_int-0x8
+ 178:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 17f <main+0x88>
+			17b: R_X86_64_PC32	init_gstr1-0x4
+ 17f:	48 89 c6             	mov    rsi,rax
+ 182:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 189 <main+0x92>
+			185: R_X86_64_PC32	.rodata+0x1c
+ 189:	48 89 c7             	mov    rdi,rax
+ 18c:	b8 00 00 00 00       	mov    eax,0x0
+ 191:	e8 00 00 00 00       	call   196 <main+0x9f>
+			192: R_X86_64_PLT32	printf-0x4
+ 196:	8b 05 00 00 00 00    	mov    eax,DWORD PTR [rip+0x0]        # 19c <main+0xa5>
+			198: R_X86_64_PC32	init_gv1-0x4
+ 19c:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+ 19f:	89 d6                	mov    esi,edx
+ 1a1:	89 c7                	mov    edi,eax
+ 1a3:	e8 00 00 00 00       	call   1a8 <main+0xb1>
+			1a4: R_X86_64_PLT32	fadd-0x4
+ 1a8:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+ 1ab:	be 1e 00 00 00       	mov    esi,0x1e
+ 1b0:	bf 32 00 00 00       	mov    edi,0x32
+ 1b5:	e8 8e fe ff ff       	call   48 <fsub>
+ 1ba:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+ 1bd:	48 8b 05 00 00 00 00 	mov    rax,QWORD PTR [rip+0x0]        # 1c4 <main+0xcd>
+			1c0: R_X86_64_PC32	init_gfp1-0x4
+ 1c4:	be 1e 00 00 00       	mov    esi,0x1e
+ 1c9:	bf 32 00 00 00       	mov    edi,0x32
+ 1ce:	ff d0                	call   rax
+ 1d0:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+ 1d3:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+ 1d6:	89 c6                	mov    esi,eax
+ 1d8:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 1df <main+0xe8>
+			1db: R_X86_64_PC32	.rodata+0x36
+ 1df:	48 89 c7             	mov    rdi,rax
+ 1e2:	b8 00 00 00 00       	mov    eax,0x0
+ 1e7:	e8 00 00 00 00       	call   1ec <main+0xf5>
+			1e8: R_X86_64_PLT32	printf-0x4
+ 1ec:	b8 00 00 00 00       	mov    eax,0x0
+ 1f1:	c9                   	leave
+ 1f2:	c3                   	ret

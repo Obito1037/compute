@@ -1,0 +1,3 @@
+COMMAND: gcc -E -D U8 main.c -o ../../outputs/lab05_main_preprocessed_20260523.i
+exit_code=0
+1212 ../../outputs/lab05_main_preprocessed_20260523.i

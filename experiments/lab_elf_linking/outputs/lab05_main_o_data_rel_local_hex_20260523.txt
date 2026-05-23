@@ -1,0 +1,6 @@
+COMMAND: readelf -x .data.rel.local main.o
+
+Hex dump of section '.data.rel.local':
+ NOTE: This section has relocations against it, but these have NOT been applied to this dump.
+  0x00000000 00000000 00000000 00000000 00000000 ................
+

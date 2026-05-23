@@ -1,0 +1,10 @@
+COMMAND: ./main_sub
+student id : U202414558 
+auto x = 1 , static count =1
+auto x = 1 , static count =2
+display init_gstr1 : U202414558 
+enter into fadd count = 1
+static fsub : uninit_gv2 = 12 
+enter into fadd count = 2
+sum = 20 
+exit_code=0

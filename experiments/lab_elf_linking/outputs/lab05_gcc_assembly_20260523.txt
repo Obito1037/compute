@@ -1,0 +1,3 @@
+COMMAND: gcc -S -fverbose-asm -D U8 main.c -o ../../outputs/lab05_main_verbose_20260523.s
+exit_code=0
+310 ../../outputs/lab05_main_verbose_20260523.s

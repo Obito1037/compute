@@ -1,0 +1,26 @@
+COMMAND: gdb -q --batch ./main_sub with printf inspection
+Breakpoint 1 at 0x12cc: file main.c, line 48.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:48
+48	     check_gcc_condition(init_gstr1);   //检查学号与条件编译是否一致
+$1 = {int (const char *, ...)} 0x7ffff7c60100 <__printf>
+Symbol "printf" is at 0x7ffff7c60100 in a file compiled without debugging.
+From                To                  Syms Read   Shared Object Library
+0x00007ffff7fc6000  0x00007ffff7ff0195  Yes         /lib64/ld-linux-x86-64.so.2
+0x00007ffff7c28800  0x00007ffff7dafd39  Yes         /lib/x86_64-linux-gnu/libc.so.6
+   0x7ffff7c60100 <__printf>:	endbr64
+   0x7ffff7c60104 <__printf+4>:	push   %rbp
+   0x7ffff7c60105 <__printf+5>:	mov    %rsp,%rbp
+   0x7ffff7c60108 <__printf+8>:	sub    $0xd0,%rsp
+   0x7ffff7c6010f <__printf+15>:	mov    %rsi,-0xa8(%rbp)
+   0x7ffff7c60116 <__printf+22>:	mov    %rdx,-0xa0(%rbp)
+   0x7ffff7c6011d <__printf+29>:	mov    %rcx,-0x98(%rbp)
+   0x7ffff7c60124 <__printf+36>:	mov    %r8,-0x90(%rbp)

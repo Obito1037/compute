@@ -1,0 +1,7 @@
+COMMAND: ls -l main_sub sub_main main_sub_static; file main_sub sub_main main_sub_static
+-rwxrwxrwx 1 obito obito  20312 May 23 11:44 main_sub
+-rwxrwxrwx 1 obito obito 789616 May 23 11:44 main_sub_static
+-rwxrwxrwx 1 obito obito  20312 May 23 11:44 sub_main
+main_sub:        ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5a6b5909019e4fb4b5ebb9dccea2b1fd826fb232, for GNU/Linux 3.2.0, with debug_info, not stripped
+sub_main:        ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=6e8e5b721cc3263125029330072db69a157e6fda, for GNU/Linux 3.2.0, with debug_info, not stripped
+main_sub_static: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=5de23ba67d4d455299c8c9de69b719da95a82ba1, for GNU/Linux 3.2.0, with debug_info, not stripped

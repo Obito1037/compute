@@ -1,0 +1,25 @@
+COMMAND: readelf -p .strtab main.o
+
+String dump of section '.strtab':
+  [     1]  main.c
+  [     8]  count.0
+  [    10]  fsub
+  [    15]  init_gv1
+  [    1e]  uninit_gv2
+  [    29]  init_gstr1
+  [    34]  uninit_gstr2
+  [    41]  init_garr1
+  [    4c]  uninit_garr2
+  [    59]  init_gp1
+  [    62]  uninit_gp2
+  [    6d]  init_gfp1
+  [    77]  fadd
+  [    7c]  uninit_gfp2
+  [    88]  gv
+  [    8b]  fcount
+  [    92]  printf
+  [    99]  __stack_chk_fail
+  [    aa]  main
+  [    af]  check_gcc_condition
+  [    c3]  extern_int
+
