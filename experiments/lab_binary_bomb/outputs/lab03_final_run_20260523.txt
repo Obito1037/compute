@@ -1,0 +1,16 @@
+Input your Student ID : 
+welcome  U202414558 
+You have 6 bombs to defuse! 
+Gate 1 :  input a string that meets the requirements. 
+Phase 1 passed! 
+Gate 2 :  input six intergers that meets the requirements. 
+Phase 2 passed! 
+Gate 3 :  input 2 intergers. 
+Phase 3 passed! 
+Gate 4 :  input 2 intergers and a string. 
+Phase 4 passed! 
+Gate 5 :  input  a string. 
+Phase 5 passed! 
+Gate 6 :  input 6 intergers. 
+Phase 6 passed! 
+Congratulations! You have passed all the tests! 

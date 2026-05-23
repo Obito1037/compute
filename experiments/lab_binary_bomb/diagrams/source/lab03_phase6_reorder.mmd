@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph Original["Original linked list"]
+        A1["1: node1 value 281"] --> A2["2: node2 value 907"] --> A3["3: node3 value 322"] --> A4["4: node4 value 121"] --> A5["5: node5 value 824"] --> A6["6: node6 value 528"]
+    end
+    subgraph Input["Input order"]
+        B["2 5 6 3 1 4"]
+    end
+    subgraph Reordered["Reordered list"]
+        C2["node2 value 907"] --> C5["node5 value 824"] --> C6["node6 value 528"] --> C3["node3 value 322"] --> C1["node1 value 281"] --> C4["node4 value 121"]
+    end
+    Original --> Input --> Reordered

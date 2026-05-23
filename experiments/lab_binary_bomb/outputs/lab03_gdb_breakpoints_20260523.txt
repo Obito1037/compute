@@ -1,0 +1,68 @@
+Breakpoint 1 at 0x1993
+Breakpoint 2 at 0x1a21
+Breakpoint 3 at 0x1b08
+Breakpoint 4 at 0x1ccb
+Breakpoint 5 at 0x1d76
+Breakpoint 6 at 0x1df2
+Breakpoint 7 at 0x1ef2
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+--- breakpoint: phase_1 ---
+input string: 
+0x555555558510 <input_strings+80>:	"Computer System Foundation"
+expected string for last digit 8: 
+0x5555555581b0 <special+400>:	"Computer System Foundation"
+rdi            0x555555558510      93824992249104
+rbp            0x7fffffffdeb0      0x7fffffffdeb0
+rsp            0x7fffffffdeb0      0x7fffffffdeb0
+
+--- checkpoint: phase_2 after read_six_numbers ---
+0x7fffffffde90:	8	5	14	20
+0x7fffffffdea0:	35	56
+
+--- checkpoint: phase_3 after sscanf ---
+first integer: 0x7fffffffde98:	5
+second integer: 0x7fffffffde9c:	789
+
+--- checkpoint: phase_4 after func4 ---
+func4 return eax = $1 = 7
+first integer: 0x7fffffffde94:	14
+second integer: 0x7fffffffde98:	7
+
+--- checkpoint: phase_5 transformed string ---
+0x7fffffffdea1:	"bruins"
+
+--- checkpoint: phase_6 after read_six_numbers ---
+0x7fffffffde50:	2	5	6	3
+0x7fffffffde60:	1	4
+
+--- checkpoint: phase_6 reordered list head ---
+node 1: 0x555555558370 <node2>:	907	2
+node 2: 0x555555558340 <node5>:	824	5
+node 3: 0x555555558220 <node6>:	528	6
+node 4: 0x555555558360 <node3>:	322	3
+node 5: 0x555555558380 <node1>:	281	1
+node 6: 0x555555558350 <node4>:	121	4
+Input your Student ID : 
+welcome  U202414558 
+You have 6 bombs to defuse! 
+Gate 1 :  input a string that meets the requirements. 
+Phase 1 passed! 
+Gate 2 :  input six intergers that meets the requirements. 
+Phase 2 passed! 
+Gate 3 :  input 2 intergers. 
+Phase 3 passed! 
+Gate 4 :  input 2 intergers and a string. 
+Phase 4 passed! 
+Gate 5 :  input  a string. 
+Phase 5 passed! 
+Gate 6 :  input 6 intergers. 
+Phase 6 passed! 
+Congratulations! You have passed all the tests! 
+[Inferior 1 (process 687) exited normally]
